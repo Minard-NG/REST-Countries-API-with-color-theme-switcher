@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Country Navigator</title>
     <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link id="pagestylesheet" rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -14,11 +14,11 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class=" about__body lg-theme">
+  <body class="about__body lg-theme">
     <header class="lg-theme">
       <nav class="container">
         <h1>Where in the world?</h1>
-        <p><i class="far fa-moon"></i> Dark Mode</p>
+        <p id="darkModeSwitch"><i class="far fa-moon"></i> Dark Mode</p>
       </nav>
     </header>
 
@@ -35,52 +35,55 @@
         <p>Filter by Region</p>
         <i class="fas fa-chevron-down"></i>
 
-        <!-- <ul>
-          <li>Africa</li>
-          <li>America</li>
-          <li>Asia</li>
-          <li>Europe</li>
-          <li>Oceania</li>
-        </ul> -->
+        <ul class="d-none">
+          <li><a href='./index.html'>Africa</a></li>
+          <li><a href='./index.html'>America</a></li>
+          <li><a href='./index.html'>Asia</a></li>
+          <li><a href='./index.html'>Europe</a></li>
+          <li><a href='./index.html'>Oceania</a></li>
+        </ul>
       </div>
     </div>
 
-    <nav class="infonav container"><a href="./index.html" class="button"><i class="fas fa-arrow-left"></i> 
-    &nbsp;&nbsp;Back
-    </a></nav>
+    <nav class="infonav container">
+      <a href="./index.html" class="button"
+        ><i class="fas fa-arrow-left"></i>
+        &nbsp;&nbsp;Back
+      </a>
+    </nav>
 
     <main class="infomain container">
-        <div class="flag">
-          <img src="./images/SA_flag.jpg" alt="country flag">
+      <div class="flag">
+        <img src="./images/SA_flag.jpg" alt="country flag" />
+      </div>
+
+      <div class="info">
+        <h3>South Africa</h3>
+        <div class="info__1">
+          <p>Native Name: <span></span></p>
+          <p>Population: <span></span></p>
+          <p>Region: <span></span></p>
+          <p>Sub Region: <span></span></p>
+          <p>Capital: <span></span></p>
         </div>
 
-        <div class="info">
-          <h3>South Africa</h3>
-          <div class="info__1">
-            <p>Native Name: <span></span></p>
-            <p>Population: <span></span></p>
-            <p>Region: <span></span></p>
-            <p>Sub Region: <span></span></p>
-            <p>Capital: <span></span></p>
-          </div>
+        <div class="info__2">
+          <p>Top Level Domain: <span></span></p>
+          <p>Currencies: <span></span></p>
+          <p>Languages: <span></span></p>
+        </div>
 
-          <div class="info__2">
-            <p>Top Level Domain: <span></span></p>
-            <p>Currencies: <span></span></p>
-            <p>Languages: <span></span></p>
-          </div>
-
-          <div class="info__footer">
-            <p>Border Countries: </p>
-            <div class="info__footer-links">
-              <a href="#" class="button">France</a>
-              <a href="#" class="button">France</a>
-              <a href="#" class="button">France</a>
-              <a href="#" class="button">France</a>
-              <a href="#" class="button">France</a>
-            </div>
+        <div class="info__footer">
+          <p>Border Countries:</p>
+          <div class="info__footer-links">
+            <a href="#" class="button">France</a>
+            <a href="#" class="button">France</a>
+            <a href="#" class="button">France</a>
+            <a href="#" class="button">France</a>
+            <a href="#" class="button">France</a>
           </div>
         </div>
+      </div>
     </main>
     <script src="./script.js"></script>
   </body>
