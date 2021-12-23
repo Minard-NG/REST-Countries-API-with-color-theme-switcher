@@ -91,7 +91,7 @@ function renderGrid(data) {
 
     mainGrid.innerHTML = content;
 }
-if (document.location.pathname === '/index.html') {
+if (document.location.pathname === '/index.html' || document.location.pathname === '/') {
     getData('https://restcountries.com/v3.1/all'); //load the data on page load;
 }
 
