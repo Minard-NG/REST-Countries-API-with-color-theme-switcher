@@ -301,6 +301,7 @@ header p:hover {
   gap: 4.625rem 1.25rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 6.25rem;
 }
 
 .grid__item {
