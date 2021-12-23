@@ -86,11 +86,27 @@ function renderGrid(data) {
       </a>`
 
     });
+    if(mainGrid){
+        mainGrid.innerHTML = content;
+    }
 
-    mainGrid.innerHTML = content;
+    
 }
 if (document.location.pathname === '/index.html' || document.location.pathname === '/') {
-    getData('https://restcountries.com/v3.1/all'); //load the data on page load;
+    let url = document.location.href;
+    let tmp = url.split('?'),
+        tmp1, region;
+
+    if(tmp.length==2){
+        tmp1= tmp[1].split('=');
+        region = tmp1[1].toLowerCase();
+
+        getData(`https://restcountries.com/v3.1/region/${region}`)
+    }else{
+        getData('https://restcountries.com/v3.1/all'); //load the data on page load;
+    }
+
+    
 }
 
 
