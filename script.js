@@ -44,7 +44,7 @@ function switcher(evt) {
     }
 }
 
-//filter selector event handler
+//filter selector animation event handler
 let filterBtn = document.querySelector('.filter__selector ');
 let dropDownList = document.querySelector('.filter__selector > ul');
 
@@ -58,3 +58,67 @@ filterBtn.addEventListener('click', () => {
         dropDownList.classList.remove('d-none');
     }
 });
+
+//handling asynchronous calss
+async function getData(url) {
+    const response = await fetch(url);
+
+    let data = await response.json();
+
+    console.log(data)
+    renderGrid(data)
+
+}
+
+function renderGrid(data) {
+    mainGrid = document.querySelector('.grid');
+    content = '';
+
+    data.forEach(obj => {
+        content += `<a class="grid__item" href="./info.html">
+        <div class="grid__item-img">
+          <img src=${obj.flags.png} alt="country flag" />
+        </div>
+        <div class="grid__item-content">
+          <h3>${obj.name.common}</h3>
+          <p>Population: <span>${obj.population}</span></p>
+          <p>Region: <span>${obj.region}</span></p>
+          <p>Capital: <span>${obj.capital}</span></p>
+        </div>
+      </a>`
+
+    });
+
+    mainGrid.innerHTML = content;
+}
+getData('https://restcountries.com/v3.1/all'); //load the data on page load;
+
+
+//search event handler
+let search = document.getElementById('search');
+
+search.addEventListener('keyup', (evt) => {
+    if (search.value) {
+        getData(`https://restcountries.com/v3.1/name/${search.value}`);
+    } else {
+        getData('https://restcountries.com/v3.1/all');
+    }
+});
+
+
+//filter by region event handler
+let filter_links = dropDownList.querySelectorAll('a');
+
+filter_links.forEach((a) => {
+    a.addEventListener('click', filterer);
+});
+
+function filterer(evt) {
+    let region = evt.target.innerText.toLowerCase();
+    console.log(region);
+    console.log(`https://restcountries.com/v3.1/region/${region}`)
+
+    console.log(getData(`https://restcountries.com/v3.1/region/${region}`))
+
+
+}
