@@ -78,7 +78,7 @@ function renderGrid(data) {
           <img src=${obj.flags.png} alt="country flag" />
         </div>
         <div class="grid__item-content">
-          <h3 id='countryName'>${obj.name.common}</h3>
+          <h3 >${obj.name.common}</h3>
           <p>Population: <span>${obj.population}</span></p>
           <p>Region: <span>${obj.region}</span></p>
           <p>Capital: <span>${obj.capital}</span></p>
