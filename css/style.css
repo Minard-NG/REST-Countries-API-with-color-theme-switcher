@@ -60,6 +60,39 @@ a {
   color: #111517;
 }
 
+.loader {
+  margin: 0 auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border-top: 0.35rem solid transparent;
+  border-right: 0.35rem solid #64f7b9;
+  border-left: 0.35rem solid #64f7b9;
+  border-bottom: 0.35rem solid #64f7b9;
+  -webkit-animation: spin 500ms linear infinite;
+          animation: spin 500ms linear infinite;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -381,6 +414,7 @@ header p:hover {
   gap: 2.75rem 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 6.25rem;
 }
 
 .infomain .flag {
