@@ -61,11 +61,9 @@ filterBtn.addEventListener('click', () => {
 
 //handling asynchronous calss
 async function getData(url) {
-    console.log(url);
     const response = await fetch(url);
 
     let data = await response.json();
-    console.log(data);
     renderGrid(data)
 
 }
@@ -118,10 +116,8 @@ filter_links.forEach((a) => {
 
 function filterer(evt) {
     let region = evt.target.innerText.toLowerCase();
-    console.log(region);
-    console.log(`https://restcountries.com/v3.1/region/${region}`)
 
-    console.log(getData(`https://restcountries.com/v3.1/region/${region}`))
+    getData(`https://restcountries.com/v3.1/region/${region}`)
 
 
 }
@@ -131,7 +127,6 @@ async function getInfoData(url) {
     const response = await fetch(url);
 
     let data = await response.json();
-    console.log(data)
     renderInfoData(data)
    
 }
@@ -240,8 +235,7 @@ if (document.location.pathname === '/info.html') {
     }
     if(tmp.split('=')[0] ==='code'){
         code = tmp.split('=')[1].toLowerCase();
-        console.log(code);
-        console.log(getInfoData(`https://restcountries.com/v2/alpha/${code}`))
+
         getInfoData(`https://restcountries.com/v2/alpha/${code}`); //load the data on page load;
     }  
 }
