@@ -1,6 +1,6 @@
 # Country Navigator
 
-In this project, I integrate with the famous REST Countries API to pull country data and display it nicely for easy use by users. Also added a theme switcher and subtle animation to improve user experience.
+In this project, I integrate with the famous REST Countries API to pull country data and display it nicely for easy use by users. Also added a theme switcher and subtle transition effects to improve user experience.
 
 ## Table of contents
 
