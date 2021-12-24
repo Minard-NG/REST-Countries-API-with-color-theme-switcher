@@ -53,7 +53,7 @@ Users should be able to:
 
 ### What I learned
 
-In this project, I tested out a fluid typography concept (__just for font sizes__) to help reduce the media queries. In the code snippet below, the base font-size is a non-responsive css unit(__such as px__),while the flexible font-size is a responsive unit(__such as vw__); 
+In this project, I tested out a fluid typography concept (__just for font sizes__) to help reduce the media queries. In the code snippet below, the base font-size is a non-responsive css unit(__such as px__),while the flexible font-size is a responsive unit(__such as vw__). 
 
 ```css
 .selector{
@@ -61,6 +61,23 @@ In this project, I tested out a fluid typography concept (__just for font sizes_
 }
 ```
 
+I learnt more about passing data between html pages. The three ways to do so are:
+- Using LocalStorage
+- Using SessionStorage
+- Using QueryString
+
+I have been used to using Local/Session Storage api utililzing the setItem() and getItem() methods. The query string approach provided an interesting learning opportunity and peculiar use case when the data that should be passed to the new html page is present on the anchor elements that initiates the switch to the new html page. Implementing an onclick event handler on the anchor element to switch items on the Local/session api may not be effective in such a use case.
+
+```js
+let dataToBePassed='xyz';
+
+href = `./index.html?name=${dataToBePassed}`;
+
+//new html page
+let url = document.location.href;
+let tmp =  url.split('?')[1];
+let dataPassed = tmp.split('=')[1];
+```
 
 
 To see how you can add code snippets, see below:
