@@ -46,9 +46,9 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
 - Sass/Scss
 - JavaScript
+- Mobile-first workflow
 - Git and GitHub
 
 ### What I learned
@@ -79,26 +79,20 @@ let tmp =  url.split('?')[1];
 let dataPassed = tmp.split('=')[1];
 ```
 
+For the theme switcher I placed an id on link tag for stylesheet and swap the href attribute value dynamically using JS.
 
-To see how you can add code snippets, see below:
+I utilized the async/await JS syntax to fetch data, as shown below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+async function getData(url) {
+    const response = await fetch(url);
+
+    let data = await response.json();
+    renderGrid(data)
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I then, utilized the JSON formatter extension on chrome to properly view the structure of the data fetched from the REST contries api and properly access the values needed.
 
 ### Continued development
 
