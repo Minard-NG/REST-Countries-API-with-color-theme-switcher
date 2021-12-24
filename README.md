@@ -10,7 +10,7 @@ In this project, I explored the asynchronous nature of JavaScript. For this proj
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [What I learnt](#what-i-learnt)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -51,7 +51,7 @@ Users should be able to:
 - Mobile-first workflow
 - Git and GitHub
 
-### What I learned
+### What I learnt
 
 In this project, I tested out a fluid typography concept (__just for font sizes__) to help reduce the media queries. In the code snippet below, the base font-size is a non-responsive css unit(__such as px__),while the flexible font-size is a responsive unit(__such as vw__). 
 
@@ -96,7 +96,7 @@ I then, utilized the JSON formatter extension on chrome to properly view the str
 
 ### Continued development
 
-Do more project integrating with apis, explore backend developement
+Do more projects integrating with APIs, explore backend developement
 
 ### Useful resources
 
