@@ -1,6 +1,6 @@
 # Country Navigator
 
-In this project, I integrate with the famous REST Countries API to pull country data and display it nicely for easy use by users. Also added a theme switcher and subtle transition effects to improve user experience.
+In this project, I explored the asynchronous nature of JavaScript. For this project, I integrated with the famous REST Countries API to pull country data and display it nicely for easy use by users. I also, added a theme switcher and subtle transition effects to improve user experience.
 
 ## Table of contents
 
@@ -47,13 +47,21 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- SASS/SCSS
+- Sass/Scss
 - JavaScript
 - Git and GitHub
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this project, I tested out a fluid typography concept (__just for font sizes__) to help reduce the media queries. In the code snippet below, the base font-size is a non-responsive css unit(__such as px__),while the flexible font-size is a responsive unit(__such as vw__); 
+
+```css
+.selector{
+  font-size: calc(base font-size + flexible font-size)
+}
+```
+
+
 
 To see how you can add code snippets, see below:
 
